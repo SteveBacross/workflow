@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+
+    <div wicket:id="prenomcontainer">
+        <!-- Modal -->
+        <div class="modal fade" id="prenomstaticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modifier Pr&eacute;nom</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div> <!-- end modal header -->
+                    <form action="" wicket:id="formModal">
+                        <div class="modal-body">
+                            <!--                        ...-->
+                            <!--<div>
+                                <form action="" >
+                                    <input type="text" wicket:id="nom" class="form-control">
+                                </form>
+                            </div>-->
+                            <input type="text" wicket:id="utilisateurRole.prenoms" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+<!--                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>-->
+                            <button type="submit" class="btn btn-primary" wicket:id="submit">Valider</button>
+                            <a data-bs-dismiss="modal">annuler</a>
+                        </div> <!-- end modal footer -->
+                    </form>
+
+                </div> <!-- end modal content-->
+            </div> <!-- end modal dialog-->
+        </div> <!-- end modal-->
+    </div>
+
+
+</wicket:panel>
+</body>
+</html>

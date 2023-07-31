@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="workflow-backend" />
+        <module name="workflow-article" />
+        <module name="workflow-demande" />
+        <module name="workflow-departement" />
+        <module name="workflow-utilisateurs" />
+        <module name="workflow-frontend" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="workflow" target="1.5" />
+      <module name="workflow-article" target="1.8" />
+      <module name="workflow-backend" target="1.8" />
+      <module name="workflow-demande" target="1.8" />
+      <module name="workflow-departement" target="1.8" />
+      <module name="workflow-frontend" target="1.8" />
+      <module name="workflow-modules" target="1.5" />
+      <module name="workflow-utilisateurs" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="workflow-article" options="-parameters" />
+      <module name="workflow-backend" options="-parameters" />
+      <module name="workflow-demande" options="-parameters" />
+      <module name="workflow-departement" options="-parameters" />
+      <module name="workflow-frontend" options="-parameters" />
+      <module name="workflow-utilisateurs" options="-parameters" />
+    </option>
+  </component>
+</project>

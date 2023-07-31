@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3bfa4323-1dbd-400e-a429-d7c9e2b2e6f3">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="18"/>
+	<property name="ireport.y" value="8"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="184" y="50" width="181" height="16" uuid="8849de63-9db0-4615-8b49-f80bdf217e3e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Rapport sur les demandes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="0" width="57" height="20" uuid="b15577ea-8fae-4252-a8b5-d476a22f86a2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Imprimé le :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="475" y="0" width="80" height="20" uuid="3470d325-7d1e-4baa-9c85-4bc5fc9a76b1"/>
+				<textFieldExpression><![CDATA[$P{dateOfDay}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="67" width="555" height="1" uuid="42f6ddc4-b4cf-4577-91f2-4c0d72a54c88"/>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="5" y="2" width="151" height="20" uuid="8973790c-02c4-4a53-9ca2-f426aecd00b9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel : 22 26 84 61 / 90 05 38 75]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="30" width="117" height="20" uuid="00030a5a-0cb7-44db-958a-80d599d37541"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BP 31041 Lomé-Togo]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="60" height="20" uuid="a3d176a4-761a-4b2d-b399-b1404f4d37ef"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periode du : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="16" width="68" height="20" uuid="3645189b-2667-4258-a388-ab2bbf839c66"/>
+				<textFieldExpression><![CDATA[$P{dateDebut}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="16" width="26" height="20" uuid="8a8a4a2d-bfcb-4cc3-b226-595120caaeb9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[au]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="16" width="66" height="20" uuid="3e9c7ec1-8dc5-47b5-91d1-0049c3151104"/>
+				<textFieldExpression><![CDATA[$P{dateFin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="11" width="100" height="20" uuid="28c7ca71-761b-4e8e-8524-9c22af551013"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Demandes en cours]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="11" width="100" height="20" uuid="aba41b8b-ec3f-412d-8d56-2d07752cbb61"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Demandes validées]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="11" width="100" height="20" uuid="fbd31f2d-fa39-43c3-a833-99e46ef30b82"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Demandes rejetées]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="11" width="111" height="20" uuid="454fc2b4-a884-4688-aada-05d495524210"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nouvelles Demandes]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="68" splitType="Stretch">
+			<textField>
+				<reportElement x="171" y="0" width="100" height="20" uuid="e99f8ce5-e1d7-4ca6-ba5f-8b2ddaa95283"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tailleProgress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="100" height="20" uuid="9269f0cc-460b-4aa5-822b-56b79d6aaab1"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tailleValide}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="100" height="20" uuid="cc5f62e4-e61d-4098-b170-e20cc139eeec"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tailleRefuse}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="20" width="311" height="20" uuid="5a691c1f-0809-4235-a883-9c1f334aa0d8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="371" y="20" width="100" height="20" uuid="1eeb449f-0137-40c5-9016-07a8ba3a04c7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tailleTotale}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="111" height="20" uuid="1919a2ba-9fc3-4ab6-8e7f-b3b7ccf9993c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tailleNew}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

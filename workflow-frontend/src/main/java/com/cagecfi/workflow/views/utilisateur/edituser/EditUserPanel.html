@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                <li class="breadcrumb-item active">edit Utilisateur</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">MODIFIER UTILISATEUR</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- Form row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card ribbon-box">
+                        <div class="card-header">
+                            <div class="rox">
+                                <div class="ribbon ribbon-warning float-start"><i class="mdi mdi-access-point me-1"></i>Modifier utilisateur</div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" wicket:id="container">
+                                <div class="tab-pane show active" id="form-row-preview">
+                                    <form wicket:id="form">
+                                        <div class="row g-2">
+                                            <!-- <div class="mb-3 col-md-5">
+                                                 <label >Choisir personne</label>
+                                             </div>-->
+
+                                            <div class="mb-3">
+                                                <!--                                                <label class="form-label" >Choisir Utilisateur</label>-->
+                                                <div class="input-group input-group-merge">
+                                                    <!--<div class=" col-md-5">
+                                                        <span class="form-control" id="validationUtilisateur" aria-describedby="inputGroupPrependU" >user name</span>
+                                                    </div>-->
+
+                                                    <div class="col-md-2 text-center">
+                                                        <label class="form-label" style="margin-top: 16px"> Veuillez selectionner un utilisateur</label>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a data-bs-toggle="modal" href="#usrstaticBackdrop" class="action-icon">
+                                                            <i class="mdi mdi-dots-horizontal-circle-outline mdi-36px"></i>
+                                                        </a>
+                                                    </div>
+                                                    <!--      <span class="input-group-text" id="inputGroupPrepend"><i class="mdi mdi-dots-horizontal mdi-24px"></i></span>-->
+                                                    <!--<div class="input-group-text">
+                                                        <span class="" id="inputGroupPrependU" data-bs-toggle="modal" data-bs-target="#usrstaticBackdrop">
+                                                            <i class="mdi mdi-dots-horizontal mdi-24px"></i>
+                                                        </span>
+                                                    </div>-->
+
+                                                    <div class="invalid-feedback">
+                                                        Veuillez selectionner un utilisateur.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-5">
+                                                <label for="inputNom" class="form-label">Nom<span class="text-danger">*</span></label>
+                                                <input type="text" wicket:id="utilisateurRole.nom" class="form-control" id="inputNom" placeholder="Nom">
+                                            </div>
+                                            <div class="mb-3 col-md-7">
+                                                <label for="inputPrenom" class="form-label">Pr&eacute;noms<span class="text-danger">*</span></label>
+                                                <input type="text" wicket:id="utilisateurRole.prenoms" class="form-control" id="inputPrenom" placeholder="Prenoms">
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-5">
+                                                <label for="inputTel" class="form-label">T&eacute;l&eacute;phone<span class="text-danger">*</span></label>
+                                                <input type="text" wicket:id="utilisateurRole.telephone" class="form-control" id="inputTel" placeholder="Telephone">
+                                            </div>
+                                            <div class="mb-3 col-md-7">
+                                                <label for="inputEmail4" class="form-label">Email<span class="text-danger">*</span></label>
+                                                <input type="text" wicket:id="utilisateurRole.email" class="form-control" id="inputEmail4" placeholder="Email">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-5">
+                                                <label for="inputPass" class="form-label">Mot de passe</label>
+                                                <input type="password" wicket:id="utilisateurRole.password" class="form-control" id="inputPass" placeholder="Mot de passe">
+                                            </div>
+                                            <div class="mb-3 col-md-7">
+                                                <label for="inputPassConf" class="form-label">Confirmer mot de passe</label>
+                                                <input type="password" wicket:id="confirmPass" class="form-control" id="inputPassConf" placeholder="Confirmez le mot de passe">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row mt-2">
+                                            <fieldset class="border p-2">
+                                                <legend class="float-none w-auto">Activation</legend>
+                                                <div class="control-group" wicket:id="radioValue">
+                                                    <input type="radio" class="form-check-input">
+                                                </div>
+                                                <!--<span wicket:id="actif" style="display: inline-flex"></span>
+                                                <input type="radio" class="form-check-input" >-->
+                                            </fieldset>
+                                        </div>
+
+                                        <button type="submit" wicket:id="submit" class="btn btn-primary mt-2">Valider</button>
+                                    </form>
+                                </div> <!-- end preview-->
+
+                            </div> <!-- end tab-content-->
+
+                            <div wicket:id="usrSelecteur"></div>
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            </div>
+
+            <style>
+                fieldset.scheduler-border {
+                    border: 1px groove #ddd !important;
+                    padding: 0 1.4em 1.4em 1.4em !important;
+                    margin: 0 0 1.5em 0 !important;
+                    -webkit-box-shadow:  0px 0px 0px 0px #000;
+                    box-shadow:  0px 0px 0px 0px #000;
+                }
+
+                legend.scheduler-border {
+                    font-size: 1.2em !important;
+                    font-weight: bold !important;
+                    text-align: left !important;
+                }
+            </style>
+            <!-- end row -->
+
+        </wicket:panel>
+    </body>
+</html>

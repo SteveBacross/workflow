@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                <li class="breadcrumb-item active">new Utilisateur</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">AJOUTER UTILISATEUR</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- Form row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card ribbon-box">
+                        <div class="card-body">
+                            <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i> Creer utilisateur</div>
+                            <!--                            <h4 class="header-title">Custom styles</h4>-->
+                            <br> <br> <br>
+                            <!-- <h4 class="header-title">Form Row</h4> -->
+<!--                            <h4 class="nav nav-tabs nav-bordered mb-3">Nouveau Utilisateur</h4> <br>-->
+
+
+                                <div class="tab-content" wicket:id="usrContainer">
+                                    <div class="tab-pane show active" id="form-row-preview">
+                                        <div wicket:id="feedbackUser"></div>
+                                        <form wicket:id="form">
+                                            <div class="row g-2">
+                                                <div class="mb-3 col-md-6">
+                                                    <label for="nom" class="form-label">Nom <span class="text-danger">*</span></label>
+                                                    <input type="text" wicket:id="utilisateur.nom" class="form-control" id="nom" placeholder="Nom">
+                                                </div>
+                                                <div class="mb-3 col-md-6">
+                                                    <label for="prenom" class="form-label">Pr&eacute;noms <span class="text-danger">*</span></label>
+                                                    <input type="text" wicket:id="utilisateur.prenoms" class="form-control" id="prenom" placeholder="Prenom">
+                                                </div>
+                                            </div>
+
+                                            <div class="row g-2">
+                                                <div class="mb-3 col-md-6">
+                                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                                    <input type="text" wicket:id="utilisateur.username" class="form-control" id="email" placeholder="Email">
+                                                </div>
+                                                <div class="mb-3 col-md-6">
+                                                    <label for="telephone" class="form-label">T&eacute;l&eacute;phone <span class="text-danger">*</span></label>
+                                                    <input type="text" wicket:id="utilisateur.telephone" class="form-control" id="telephone" placeholder="Telephone">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row g-2">
+                                                <div class="mb-3 col-md-6">
+                                                    <label for="password" class="form-label" >Mot de passe<span class="text-danger">*</span></label>
+                                                    <input type="password" wicket:id="utilisateur.password" class="form-control" id="password" placeholder="Mot de passe">
+                                                </div>
+                                                <div class="mb-3 col-md-6">
+                                                    <label for="passwordconf" class="form-label">Confirmer mot de passe<span class="text-danger">*</span></label>
+                                                    <input type="password" wicket:id="confirmPass" class="form-control" id="passwordconf" placeholder="Confirmer mot de passe">
+                                                </div>
+
+                                            </div>
+
+                                            <!--<div class="row g-2">
+
+                                                <div class="mb-3 col-md-6">
+                                                    <label class="form-label" for="dateDebut">Date debut</label >
+                                                    <input type="date" class="form-control" id="dateDebut" >
+                                                </div>
+
+                                                <div class="mb-3 col-md-6">
+                                                    <label class="form-label" for="department"></label >
+                                                    <select class="form-select" id="department" ></select>
+
+                                                </div>
+
+                                            </div>-->
+
+
+                                            <button type="submit" class="btn btn-primary" >Enregistrer</button>
+                                        </form>                      
+                                    </div> <!-- end preview-->
+
+
+                                </div> <!-- end tab-content-->
+
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+        </wicket:panel>
+    </body>
+</html>

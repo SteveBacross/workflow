@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/workflow.iml" filepath="$PROJECT_DIR$/workflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-modules/workflow-article/workflow-article.iml" filepath="$PROJECT_DIR$/workflow-modules/workflow-article/workflow-article.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-backend/workflow-backend.iml" filepath="$PROJECT_DIR$/workflow-backend/workflow-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-modules/workflow-demande/workflow-demande.iml" filepath="$PROJECT_DIR$/workflow-modules/workflow-demande/workflow-demande.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-modules/workflow-departement/workflow-departement.iml" filepath="$PROJECT_DIR$/workflow-modules/workflow-departement/workflow-departement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-frontend/workflow-frontend.iml" filepath="$PROJECT_DIR$/workflow-frontend/workflow-frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-modules/workflow-modules.iml" filepath="$PROJECT_DIR$/workflow-modules/workflow-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workflow-modules/workflow-utilisateurs/workflow-utilisateurs.iml" filepath="$PROJECT_DIR$/workflow-modules/workflow-utilisateurs/workflow-utilisateurs.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                <li class="breadcrumb-item active">Departement</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">DEPARTEMENT</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- Form row -->
+            <div class="row" wicket:id="depContainer">
+                <div class="col-xl-4">
+                    <div class="card ribbon-box">
+                        <div class="card-body">
+                            <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i> Creer departement</div>
+<!--                            <h4 class="header-title">Custom styles</h4>-->
+                            <br> <br> <br>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="custom-styles-preview" >
+                                    <div ></div>
+                                    <form class="needs-validation" novalidate wicket:id="depForm">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="lib" >Libelle <span class="text-danger">*</span></label>
+                                            <input type="text" wicket:id="departement.libelle" class="form-control" id="lib" placeholder="libelle" required />
+                                            <div class="valid-feedback">Looks good!</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="niveau">Niveau <span class="text-danger">*</span></label >
+                                            <select class="form-select" id="niveau" wicket:id="departement.niveau"></select>
+
+                                            <div class="valid-feedback">Looks good!</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="departmentSup">Departement superieur</label>
+                                            <select class="form-select" id="departmentSup" wicket:id="department"></select>
+                                            <!--<div class="input-group">
+                                              <span
+                                                class="input-group-text"
+                                                id="inputGroupPrepend"
+                                                >@</span>
+                                              <input
+                                                type="text"
+                                                class="form-control"
+                                                id="validationCustomUsername"
+                                                placeholder="Username"
+                                                aria-describedby="inputGroupPrepend"
+                      
+                                              />
+                                              <div class="invalid-feedback">
+                                                Please choose a username.
+                                              </div>
+                                            </div>-->
+                                        </div>
+
+
+
+                                        <!--<div class="mb-3">
+                                          <div class="form-check">
+                                            <input
+                                              type="checkbox"
+                                              class="form-check-input"
+                                              id="invalidCheck"
+                                              required
+                                            />
+                                            <label
+                                              class="form-check-label form-label"
+                                              for="invalidCheck"
+                                              >Agree to terms and conditions</label
+                                            >
+                                            <div class="invalid-feedback">
+                                              You must agree before submitting.
+                                            </div>
+                                          </div>
+                                        </div>-->
+                                        <button class="btn btn-primary" type="submit">
+                                            Submit form
+                                        </button>
+                                    </form>
+                                </div>
+                                <!-- end preview-->
+                            </div>
+                            <!-- end tab-content-->
+                        </div>
+                        <!-- end card-body-->
+                    </div>
+                    <!-- end card-->
+                </div>
+                <!-- end col-->
+
+                <div class="col-xl-8">
+                    <div class="card ribbon-box">
+                        <div class="card-body">
+                            <div class="ribbon ribbon-warning float-start"><i class="mdi mdi-access-point me-1"></i> Liste departement</div>
+                            <!--                            <h4 class="header-title">Custom styles</h4>-->
+                            <br> <br> <br>
+<!--                            <h4 class="header-title">Basic Data Table</h4>-->
+
+                            <div wicket:id="feedbackDep"></div>
+                            <div class="tab-content" wicket:id="dts">
+                                <div
+                                    class="tab-pane show active"
+                                    id="basic-datatable-preview"
+                                    >
+                                    <table id="table" class="table table-striped dt-responsive nowrap w-100">
+                                        <thead>
+                                            <tr>
+                                                <th>Libelle</th>
+                                                <th>Niveau</th>
+                                                <th>Departement Sup</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr wicket:id="listView">
+                                                <td wicket:id="libelleTab">Tiger Nixon</td>
+                                                <td wicket:id="niveauTab">System Architect</td>
+
+                                                <td wicket:id="libelleTabs">2011/04/25</td>
+                                                <td class="table-action">
+                                                    <a href="javascript: void(0);" class="action-icon text-info"  wicket:id="updateItem"> <i class="mdi mdi-pencil"></i></a>
+<!--                                                    <a href="javascript: void(0);" class="action-icon text-danger" wicket:id="deleteItem"> <i class="mdi mdi-delete"></i></a>-->
+                                                    <a href="javascript: void(0);" class="action-icon text-danger" wicket:id="deleteItem"> <i class="uil uil-trash"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <!--<tr>
+                                              <td>Sonya Frost</td>
+                                              <td>Software Engineer</td>
+                      
+                                              <td>2008/12/13</td>
+                                            </tr>-->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- end preview-->
+                            </div>
+                            <!-- end tab-content-->
+                        </div>
+                        <!-- end card body-->
+                    </div>
+                    <!-- end card -->
+                </div>
+                <!-- end col-->
+            </div>
+            <!-- end row -->
+
+
+
+        </wicket:panel>
+    </body>
+</html>

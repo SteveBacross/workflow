@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Demande</a></li>
+                                <li class="breadcrumb-item active">Validation</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">VALIDATION INTERMEDIAIRE</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="col-xxl-6">
+                    <div class="card ribbon-box">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-10">
+                                    <!--                                    <h5 class="header-title">Liste des demandes</h5>-->
+                                    <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i> Liste des demandes</div>
+                                </div>
+                            </div>
+                            <div class="row" wicket:id="alert">
+                                
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <table class="table table-sm table-striped table-centered mb-0" wicket:id="dts" 
+                                       id="scroll-horizontal-datatable" style="background-color: #edf6f9">
+                                    <thead>
+                                        <tr>
+                                            <th>Numéro</th>
+                                            <th>Date demande</th>
+                                            <th>Direction</th>
+                                            <th>Nature</th>
+                                            <th>Type Demande</th>
+                                            <th>Status</th>
+                                            <th>Priorité</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody wicket:id="containerList">
+                                        <tr wicket:id="listView">
+                                            <td wicket:id="id"></td>
+                                            <td wicket:id="dateDemandeValue"></td>
+                                            <td wicket:id="departement"></td>
+                                            <td wicket:id="nature"></td>
+                                            <td wicket:id="typeDemande"></td>
+                                            <td wicket:id="status"></td>
+                                            <td wicket:id="priorite"></td>
+                                            <td>
+                                                <a wicket:id="clickLink" title = "Visualiser" data-bs-toggle="modal" data-bs-target="#standard-modal"><span class="dripicons-preview"></span></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="standard-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="standard-modalLabel">Details de la demande</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div wicket:id="containerModal">
+                                    <table class="table table-sm table-striped table-bordered table-centered mb-2-mt-2-ml-2-mr-2">
+                                        <thead class="table-info">
+                                            <tr>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Quantité /<br>Nombre à former</th>
+                                                <th scope="col">Etat</th>
+                                                <th scope="col">Ligne budgetaire</th>
+                                                <th scope="col">Remplir ligne budgetaire</th>
+                                                <th scope="col">Actions</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr wicket:id="detailListView">
+                                                <td wicket:id="description"></td>
+                                                <td wicket:id="quantite"></td>
+                                                <td wicket:id="etat"></td>
+                                                <td wicket:id="ligneBudgetaire"></td>
+                                                <form wicket:id="formLigneBudget">
+                                                    <td><input wicket:id="ligneBudgetaireS" type="text" class="form-control input-lg"></td>
+                                                    <!--                                                    <td><input type="checkbox" class="form-check-input"></td>-->
+                                                    <td><a wicket:id="valider" type="button" class="btn btn-info" title="Approuver"><span class="dripicons-checkmark"></span></a></td>
+                                                    <td><a wicket:id="refuser" type="button" class="btn btn-warning" title="rejetter"><span class="dripicons-wrong"></span></a></td>
+                                                </form> 
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>                           
+                            </div>
+                            <div class="modal-footer">
+                                <!--                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>-->
+                                <a type="button" wicket:id="refuser" class="btn btn-danger">Refuser</a>
+                                <a type="button" wicket:id="valider" class="btn btn-primary">Suivant</a>
+                            </div>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+
+        </wicket:panel>
+    </body>
+</html>

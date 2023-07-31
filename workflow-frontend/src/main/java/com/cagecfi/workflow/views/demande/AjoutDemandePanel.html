@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Demande</a></li>
+                                <li class="breadcrumb-item active">Ajouter</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">NOUVELLE DEMANDE</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" wicket:id="globalContainer">
+                <div class="col-12">
+                    <div class="card ribbon-box">
+                    <div class="card-header">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="ribbon ribbon-info float-start">
+                                        <i class="mdi mdi-access-point me-1"></i> Ajouter une demande
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" wicket:id="alert">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form wicket:id="form" class="needs-validation" novalidate>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="mb-3">
+                                            <label for="Direction" class="form-label">Direction*</label>
+                                            <select wicket:id="demande.departement" id="Direction" class="form-select" required>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="mb-3">
+                                            <label for="nature" class="form-label">Nature*</label>
+                                            <select wicket:id="demande.nature" id="nature" class="form-select" required>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="mb-3" wicket:id="containerTypeDemande">
+                                            <label for="TypeDemande" class="form-label">Type de Demande</label>
+                                            <select wicket:id="demande.typeDemande" id="TypeDemande" class="form-select">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="Priorite" class="form-label">Priorité*</label>
+                                        <select wicket:id="demande.priorite" id="Priorite" class="form-select mb-2" required>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="form-label" for="Lieu">Lieu*</label>
+                                        <input type="text" wicket:id="demande.lieu" id="Lieu" class="form-control mb-2" placeholder="Lieu" required>
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="date" class="form-label">Date réception matériel / Date début formation*</label>
+                                        <input wicket:id="demande.dateLivraisonSouhaiteValue" id="date" class="form-control mb-2" type="date" name="date" required>
+                                    </div>
+                                </div>
+
+                                <div wicket:id="forClone">
+                                    <div class="row" wicket:id="cloneDetail" id="forClone">
+                                        <div class="col-7">
+                                            <label class="form-label mt-2" for="inlineFormInput">Description*</label>
+                                            <input type="text" wicket:id="description" id="inlineFormInput" class="form-control mt-3" >
+                                        </div>
+                                        <div class="col-2">
+                                            <label class="form-label mt-2" for="inlineFormInputQte">Quantité / Nombre à former*</label>
+                                            <input type="number" wicket:id="quantite" id="inlineFormInputQte" class="form-control" min="1" max="5" step="2" value="1">
+                                        </div>
+                                        <div class="col-3 mt-5">
+                                            <button wicket:id="cloneButton" class="btn btn-primary" title="Ajouter"><span class="dripicons-plus"></span></button>
+                                             <button wicket:id="removeIntervalleLink" class="btn btn-danger" title="Retirer"><span class="dripicons-minus"></span></button>
+                                        </div>
+<!--                                        <div class="col-2 mt-5">
+                                            <button wicket:id="removeIntervalleLink" class="btn btn-danger" title="Retirer"><span class="dripicons-minus"></span></button>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                                <div class="form-validator-mt-2">
+                                    <button class="btn btn-primary mt-3" wicket:id="submit">Valider</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </wicket:panel>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+
+    <div wicket:id="depSelecteur">
+        <!-- Modal -->
+        <div class="modal fade" id="depstaticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Selectionner Departement</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div> <!-- end modal header -->
+
+                    <div class="modal-body">
+
+
+                        <div class="tab-content" wicket:id="dts">
+                            <div class="tab-pane show active" id="basic-datatable-preview" >
+                                <table id="table" class="table table-striped dt-responsive nowrap w-100">
+                                    <thead>
+                                    <tr>
+                                        <th>Libelle</th>
+                                        <th>Niveau</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr wicket:id="rows" style="cursor: pointer" data-bs-dismiss="modal">
+                                        <td wicket:id="libelle">Tiger Nixon</td>
+                                        <td wicket:id="niveau">System Architect</td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end preview-->
+                        </div><!-- end tab-content-->
+
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary" wicket:id="submit">Valider</button>-->
+                        <!--                            <a wicket:id="yes">valider</a>-->
+                        <!-- <button type="button" class="btn btn-primary" wicket:id="yes">Valider</button>
+                           <a data-bs-dismiss="modal">annuler</a>
+                           <span>ok</span>-->
+                    </div> <!-- end modal footer -->
+
+
+                </div> <!-- end modal content-->
+            </div> <!-- end modal dialog-->
+        </div> <!-- end modal-->
+    </div>
+
+</wicket:panel>
+</body>
+</html>

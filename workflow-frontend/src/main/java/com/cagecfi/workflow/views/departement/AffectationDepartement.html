@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                <li class="breadcrumb-item active">Affectation</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">AFFECTATION DEPARTEMENT</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- Form row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card ribbon-box">
+                        <div class="card-body">
+                            <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i> Affectation Departement</div>
+                            <!--                            <h4 class="header-title">Custom styles</h4>-->
+                            <br> <br> <br>
+                            <!-- <h4 class="header-title">Form Row</h4> -->
+                            <!--                            <h4 class="nav nav-tabs nav-bordered mb-3">Nouveau Utilisateur</h4> <br>-->
+
+                            <div class="tab-content" wicket:id="affectationContainer">
+                                <div class="tab-pane show active" id="form-row-preview">
+                                    <div wicket:id="feedback"></div>
+                                    <form wicket:id="affectationForm">
+
+                                        <!--<div class="mb-3">
+                                            <label class="form-label" for="validationUtilisateur">Choisir Utilisateur</label>
+                                            <div class="mb-3 input-group input-group-merge">
+                                                <div class=" col-md-5">
+                                                    <span class="form-control" id="validationUtilisateur" aria-describedby="inputGroupPrependU" wicket:id="utilisateur.nom">user name</span>
+                                                </div>
+
+                                                &lt;!&ndash;      <span class="input-group-text" id="inputGroupPrepend"><i class="mdi mdi-dots-horizontal mdi-24px"></i></span>&ndash;&gt;
+                                                <div class="input-group-text">
+                                                    <span class="" id="inputGroupPrependU" data-bs-toggle="modal" data-bs-target="#usrstaticBackdrop">
+                                                        <i class="mdi mdi-dots-horizontal mdi-24px"></i>
+                                                    </span>
+                                                </div>
+
+                                                <div class="invalid-feedback">
+                                                    Please choose a username.
+                                                </div>
+                                            </div>
+                                        </div>-->
+
+                                        <div class="mb-3">
+                                            <label class="form-label" for="validationDepartement">Choisir departement</label>
+                                            <div class="mb-3 input-group input-group-merge">
+                                                <div class=" col-md-5">
+                                                    <span class="form-control" id="validationDepartement" aria-describedby="inputGroupPrepend" >DP</span>
+                                                </div>
+
+<!--                                                <span class="input-group-text" id="inputGroupPrepend"><i class="mdi mdi-dots-horizontal mdi-24px"></i></span>-->
+                                                <div class="input-group-text">
+                                                    <span class="" id="inputGroupPrepend" data-bs-toggle="modal" data-bs-target="#depstaticBackdrop">
+                                                        <i class="mdi mdi-dots-horizontal mdi-24px"></i>
+                                                    </span>
+                                                </div>
+
+                                                <div class="invalid-feedback">
+                                                    Please choose a username.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div wicket:id="affcontainer">
+                                            <label class="form-label" for=""></label>
+                                            <div class="col-md-10" wicket:id="ud.utilisateurList" style="display: flex">
+
+                                            </div>
+                                        </div>
+
+                                        <!--<div class="mb-3">
+                                             <label for="password" class="form-label">Show/Hide Password</label>
+                                                  <div class="input-group input-group-merge">
+                                                      <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                                                  <div class="input-group-text" data-password="false">
+                                                      <span class="password-eye"></span>
+                                                  </div>
+                                              </div>
+                                        </div>-->
+
+                                                    <!--<div class="row g-2">
+                                                        <div class="mb-3 col-md-5">
+                                                            <label for="nom" class="form-label">Nom <span class="text-danger">*</span></label>
+                                                            <input type="text" wicket:id="utilisateur.nom" class="form-control" id="nom" placeholder="nom">
+                                                        </div>
+                                                        <div class="mb-3 col-md-7">
+                                                            <label for="prenom" class="form-label">Prenom <span class="text-danger">*</span></label>
+                                                            <input type="text" wicket:id="utilisateur.prenoms" class="form-control" id="prenom" placeholder="prenom">
+                                                        </div>
+                                                    </div>-->
+
+
+                                        <button type="submit" class="btn btn-primary" wicket:id="saveBtn">Enregistrer</button>
+                                    </form>
+                                </div> <!-- end preview-->
+
+
+                            </div> <!-- end tab-content-->
+
+                            <div wicket:id="departementSelecteur"></div>
+<!--                            <div wicket:id="usrSelecteur"></div>-->
+
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            </div>
+            <!-- end row -->
+
+
+        </wicket:panel>
+    </body>
+</html>

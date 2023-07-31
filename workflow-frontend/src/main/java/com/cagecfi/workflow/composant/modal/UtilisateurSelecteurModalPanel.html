@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+
+    <div >
+        <!-- Modal -->
+        <div class="modal fade" id="usrstaticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Selectionner utilisateur</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div> <!-- end modal header -->
+
+                    <div class="modal-body">
+                        <!--                        ...-->
+                        <div wicket:id="usrcontainer">
+                              <form class="form-horizontal" action="" wicket:id="formModal">
+                                   <div class="row mb-2">
+                                       <div class="col-4">
+                                           <input type="text" wicket:id="utilisateur.nom" class="form-control" placeholder="nom">
+                                       </div>
+                                       <div class="col-4">
+                                           <input type="text" wicket:id="utilisateur.telephone" class="form-control" placeholder="telephone">
+                                       </div>
+                                       <div class="col-4">
+                                           <input type="text" wicket:id="utilisateur.email" class="form-control" placeholder="email">
+                                       </div>
+                                   </div>
+
+                                  <button type="submit" class="btn btn-primary" wicket:id="searching">rechercher</button>
+                               </form>
+                        </div>
+                        <!--                           <input type="text" wicket:id="utilisateurRole.nom" class="form-control">-->
+
+                        <div class="tab-content" wicket:id="tabContainer">
+                            <div class="tab-pane show active" id="basic-datatable-preview" >
+                                <table id="table" class="table table-striped dt-responsive nowrap w-100">
+                                    <thead>
+                                    <tr>
+                                        <th>nom</th>
+                                        <th>prenom</th>
+                                        <th>telephone</th>
+                                        <th>email</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr wicket:id="rows" style="cursor: pointer" data-bs-dismiss="modal">
+                                        <td wicket:id="nom">Tiger Nixon</td>
+                                        <td wicket:id="prenom">System Architect</td>
+                                        <td wicket:id="tel"></td>
+                                        <td wicket:id="email"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end preview-->
+                        </div><!-- end tab-content-->
+
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary" wicket:id="submit">Valider</button>-->
+                        <!--                            <a wicket:id="yes">valider</a>-->
+                        <!-- <button type="button" class="btn btn-primary" wicket:id="yes">Valider</button>
+                           <a data-bs-dismiss="modal">annuler</a>
+                           <span>ok</span>-->
+                    </div> <!-- end modal footer -->
+
+
+
+                    <!--<form action="" wicket:id="formModal">
+                        <div class="modal-body">
+
+                            <input type="text" wicket:id="utilisateurRole.username" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" wicket:id="submit">Understood</button>
+                        </div> &lt;!&ndash; end modal footer &ndash;&gt;
+
+
+                        <div class="tab-content">
+                            <div class="tab-pane show active" id="basic-datatable-preview">
+                                <table
+                                        id="basic-datatable"
+                                        class="table table-striped dt-responsive nowrap w-100"
+                                >
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr>
+                                        <td>Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>33</td>
+                                        <td>2008/11/28</td>
+                                        <td>$162,700</td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            &lt;!&ndash; end preview&ndash;&gt;
+
+                        </div>
+                        &lt;!&ndash; end tab-content&ndash;&gt;
+
+                    </form>-->
+
+                </div> <!-- end modal content-->
+            </div> <!-- end modal dialog-->
+        </div> <!-- end modal-->
+    </div>
+
+
+</wicket:panel>
+</body>
+</html>

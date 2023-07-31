@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <div class="leftside-menu scr overflow-auto">
+                <!-- LOGO -->
+                <a href="index.html" class="logo text-center logo-light">
+                    <span class="logo-lg">
+                        <wicket:link>
+                            <img src="../assets/images/logo.png" alt="" height="16" />
+                        </wicket:link>
+
+                    </span>
+                    <span class="logo-sm">
+                        <wicket:link>
+                            <img src="../assets/images/logo_sm.png" alt="" height="16" />
+                        </wicket:link>
+
+                    </span>
+                </a>
+
+                <!-- LOGO -->
+                <a href="index.html" class="logo text-center logo-dark">
+                    <span class="logo-lg">
+                        <wicket:link>
+                            <img src="../assets/images/logo-dark.png" alt="" height="16" />
+                        </wicket:link>
+
+                    </span>
+                    <span class="logo-sm">
+                        <wicket:link>
+                            <img src="../assets/images/logo_sm_dark.png" alt="" height="16" />
+                        </wicket:link>
+
+                    </span>
+                </a>
+
+                <div class="h-100" id="leftside-menu-container" data-simplebar>
+                    <!--- Sidemenu -->
+                    <ul class="side-nav">
+                        <li class="side-nav-title side-nav-item">Navigation</li>
+
+                        <li class="side-nav-item">
+                            <a
+                                data-bs-toggle="collapse"
+                                href="#sidebarDashboards"
+                                aria-expanded="false"
+                                aria-controls="sidebarDashboards"
+                                class="side-nav-link"
+                                >
+                                <i class="uil-home-alt"></i>
+                                <span class="badge bg-success float-end">4</span>
+                                <span> Dashboards </span>
+                            </a>
+                            <div class="collapse" id="sidebarDashboards">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="dashboard-analytics.html">Analytics</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="dashboard-projects.html">Projects</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-title side-nav-item">PARAMETRAGE</li>
+
+                        <li class="side-nav-item">
+                            <a href="apps-calendar.html" class="side-nav-link" wicket:id="ccc">
+                                <i class="uil-user-circle"></i>
+                                <span> Profil </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a
+                                data-bs-toggle="collapse"
+                                href="#sidebarEmail"
+                                aria-expanded="false"
+                                aria-controls="sidebarEmail"
+                                class="side-nav-link"
+                                >
+                                <i class="uil-users-alt"></i>
+                                <span> Utilisateurs </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarEmail">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="apps-email-inbox.html" wicket:id="addUser">Creer</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-email-read.html" wicket:id="editUser">Modifier</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a
+                                    data-bs-toggle="collapse"
+                                    href="#sidebarDep"
+                                    aria-expanded="false"
+                                    aria-controls="sidebarDep"
+                                    class="side-nav-link"
+                            >
+                                <i class="dripicons-box"></i>
+                                <span> D&eacute;partement </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarDep">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="apps-email-inbox.html" wicket:id="setNiveau">Niveau</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-email-read.html" wicket:id="setDepartement">D&eacute;partement</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-email-read.html" wicket:id="setAffectationDep">Affectation</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!--<li class="side-nav-item">
+                            <a href="apps-social-feed.html" class="side-nav-link" wicket:id="setDepartement">
+                                <i class="uil-rss"></i>
+                                <span> Departement </span>
+                            </a>
+                        </li>-->
+
+                        <li class="side-nav-title side-nav-item">Demande</li>
+
+                        <li class="side-nav-item">
+                            <a href="apps-social-feed.html" class="side-nav-link" wicket:id="dmd">
+                                <i class="uil-clipboard-alt"></i>
+                                <span> Demandes</span>
+                            </a>
+                        </li>
+                        
+                        <li class="side-nav-item">
+                            <a href="apps-social-feed.html" class="side-nav-link" wicket:id="validationDirectionPanel">
+                                <i class="dripicons-export"></i>
+                                <span> Validation Direction</span>
+                            </a>
+                        </li>
+                        
+                        <li class="side-nav-item">
+                            <a href="apps-social-feed.html" class="side-nav-link" wicket:id="validDmd">
+                                <i class="dripicons-direction"></i>
+                                <span> Validation Matériel</span>
+                            </a>
+                        </li>
+                        
+                        <li class="side-nav-item">
+                            <a href="apps-social-feed.html" class="side-nav-link" wicket:id="validFormation">
+                                <i class="dripicons-ticket"></i>
+                                <span> Validation Formation</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="apps-social-feed.html" class="side-nav-link" wicket:id="validDmdFinale">
+                                <i class="uil-file-check"></i>
+                                <span> Validation Finale</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a
+                                    data-bs-toggle="collapse"
+                                    href="#sidebarRapport"
+                                    aria-expanded="false"
+                                    aria-controls="sidebarRapport"
+                                    class="side-nav-link"
+                            >
+                                <i class="dripicons-box"></i>
+                                <span> Rapport </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarRapport">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="apps-email-inbox.html" wicket:id="rapportDmd">Rapport Demande</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Sidebar -left -->
+            </div>
+
+        </wicket:panel>
+    </body>
+</html>

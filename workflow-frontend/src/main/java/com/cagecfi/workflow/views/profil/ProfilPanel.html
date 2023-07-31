@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                        <li class="breadcrumb-item active">Profil</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">PROFIL UTILISATEUR</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <!-- Form row -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card ribbon-box">
+                <div class="card-body">
+                    <!-- <h4 class="header-title">Form Row</h4> -->
+<!--                    <h4 class="nav nav-tabs nav-bordered mb-3">Profil </h4> <br>-->
+                    <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i> Profil </div>
+                    <!--                            <h4 class="header-title">Custom styles</h4>-->
+                    <br> <br> <br>
+
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="form-row-preview">
+
+                            <div wicket:id="profilcontainer">
+
+                                <form wicket:id="formprofil">
+                                    <div class="row g-2">
+                                        <div>Nom</div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-3">
+                                            <span wicket:id="utilisateurRole.nom"></span>
+                                        </div>
+                                        <div class="mb-3 col-md-1">
+                                            <a data-bs-toggle="modal" href="#staticBackdrop" class="action-icon" > <i class="mdi mdi-pencil mdi-18px"></i></a>
+                                        </div>
+                                    </div>
+
+
+                                    <!--                                <br>-->
+                                    <h4 class="nav nav-tabs nav-bordered mb-3"></h4>
+                                    <div class="row g-2">
+                                        <div>Pr&eacute;noms</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-3">
+                                            <span wicket:id="utilisateurRole.prenoms"></span>
+                                        </div>
+                                        <div class="mb-3 col-md-3">
+                                            <a data-bs-toggle="modal" href="#prenomstaticBackdrop" class="action-icon"> <i class="mdi mdi-pencil mdi-18px"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="nav nav-tabs nav-bordered mb-3"></h4>
+                                    <div class="row g-2">
+                                        <div>Username</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-3">
+                                            <span wicket:id="utilisateurRole.username"></span>
+                                        </div>
+                                        <div class="mb-3 col-md-3">
+                                            <a data-bs-toggle="modal" href="#usrstaticBackdrop" class="action-icon"> <i class="mdi mdi-pencil mdi-18px"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="nav nav-tabs nav-bordered mb-3"></h4>
+                                    <div class="row g-2">
+                                        <div>T&eacute;l&eacute;phone</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-3">
+                                            <span wicket:id="utilisateurRole.telephone"></span>
+                                        </div>
+                                        <div class="mb-3 col-md-3">
+                                            <a data-bs-toggle="modal" href="#telstaticBackdrop" class="action-icon"> <i class="mdi mdi-pencil mdi-18px"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="nav nav-tabs nav-bordered mb-3"></h4>
+                                    <div class="row g-2">
+                                        <div>Email</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-3">
+                                            <span wicket:id="utilisateurRole.email"></span>
+                                        </div>
+                                        <div class="mb-3 col-md-3">
+                                            <a data-bs-toggle="modal" href="#emailstaticBackdrop" class="action-icon"> <i class="mdi mdi-pencil mdi-18px"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="nav nav-tabs nav-bordered mb-3"></h4>
+                                    <div class="row g-2">
+                                        <div>Password</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-3">*****</div>
+                                        <div class="mb-3 col-md-3">
+                                            <a data-bs-toggle="modal" href="#passstaticBackdrop" class="action-icon"> <i class="mdi mdi-pencil mdi-18px"></i></a>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <!--<form>
+                                <div class="row g-2">
+                                    <div class="mb-3 col-md-5">
+                                        <label for="inputEmail4" class="form-label">Nom</label>
+                                        <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                    <div class="mb-3 col-md-7">
+                                        <label for="inputPassword4" class="form-label">Prenom</label>
+                                        <input type="text" class="form-control" id="inputPassword4" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="mb-3 col-md-5">
+                                        <label for="inputPassword4" class="form-label">Telephone</label>
+                                        <input type="tel" class="form-control" id="inputPassword4" placeholder="Password">
+                                    </div>
+                                    <div class="mb-3 col-md-7">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>-->
+                        </div> <!-- end preview-->
+
+
+                    </div> <!-- end tab-content-->
+
+                </div> <!-- end card-body -->
+            </div> <!-- end card-->
+        </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div wicket:id="nomModal"></div>
+    <div wicket:id="prenomModal"></div>
+    <div wicket:id="usrnameModal"></div>
+    <div wicket:id="emailModal"></div>
+    <div wicket:id="telModal"></div>
+    <div wicket:id="passwModal"></div>
+
+</wicket:panel>
+</body>
+</html>

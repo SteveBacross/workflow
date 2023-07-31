@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Demande</a></li>
+                                <li class="breadcrumb-item active">Validation</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">VALIDATION DIRECTION</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row" wicket:id="containerGlobal">
+                <div class="card ribbon-box">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i>liste des demandes</div>
+                            </div>
+                            <div wicket:id="alert" class="row mb-2-mt-2"></div>
+                        </div>
+                        <div class="row" wicket:id='emptyList'>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-text">Aucune demande à valider</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2" wicket:id="listViewNew">
+                            <div class="card">
+                                <div class="card-header" style="background-color: #00afb9; color: white">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <label>N° </label> <label wicket:id="id"></label> 
+                                        </div>
+                                        <div class="col-3">
+                                            <label>Demandeur : </label> <label wicket:id="nomDemandeur"></label> 
+                                        </div>
+                                        <div class="col-4">
+                                            <label>Date de la demande :</label> <label wicket:id="dateDemandeValue"></label> 
+                                        </div>
+                                        <div class="col-3">
+                                            <label>Priorité :</label> <label wicket:id="priorite"></label> 
+                                        </div>
+                                        <div class="col-1">
+                                            <a wicket:id="collapsebtn" data-bs-toggle="collapse" href="#cardCollpase1" role="button" 
+                                               aria-expanded="false" aria-controls="cardCollpase1" class="link-dark"><i class="dripicons-chevron-down"></i></a> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="cardCollpase1" wicket:id="collapse" class="collapse">
+                                        <table class="table table-sm table-centered mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <!--                                                    <th>Numero</th>-->
+                                                    <th>Nature</th>
+                                                    <th>Type de demande</th>
+                                                    <th>Date livraison / début formation</th>
+                                                    <th>Etape</th>
+                                                    <th>Status</th>
+                                                    <th>Lieu</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <!--                                                    <td wicket:id="id"></td>-->
+                                                    <td wicket:id="nature"></td>
+                                                    <td wicket:id="typeDemande"></td>
+                                                    <td wicket:id="dateLivraisonSouhaiteValue"></td>
+                                                    <td wicket:id="etape"></td>
+                                                    <td wicket:id="status"></td>
+                                                    <td wicket:id="lieu"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="row">
+                                            <table class="table table-sm table-centered mb-0">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>Description</th>
+                                                        <th>Ligne Budgétaire</th>
+                                                        <th>Quantité /<br>Nombre à former</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr wicket:id="detailListView">
+                                                        <td wicket:id="description"></td>
+                                                        <td wicket:id="ligneBudgetaire"></td>
+                                                        <td wicket:id="quantite"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <a type="button" wicket:id="refuser" class="btn btn" style="background-color: #ff006e; color: white">Refuser</a>
+                                                    <a type="button" wicket:id="valider" class="btn btn" style="background-color: #3a86ff; color: white">Valider</a>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!--                    <div class="card-footer ml-6">
+                                                        <a type="button" class="btn btn" style="background-color: #ff006e; color: white">Refuser</a>
+                                                        <a type="button" class="btn btn" style="background-color: #3a86ff; color: white">Valider</a>
+                                                    </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </wicket:panel>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+/workflow/target/
+/workflow-article/target/
+/workflow-modules/workflow-utilisateurs/target/
+/workflow-modules/workflow-departement/target/
+/workflow-modules/workflow-demande/target/
+/workflow-modules/workflow-article/target/
+/workflow-backend/target/
+/workflow-frontend/target/

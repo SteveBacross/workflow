@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:panel>
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Workflow</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Demande</a></li>
+                                <!--                                <li class="breadcrumb-item active">Demande</li>-->
+                            </ol>
+                        </div>
+                        <h4 class="page-title">DEMANDE</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="col-xxl-6">
+                    <div class="card ribbon-box"> 
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="ribbon ribbon-info float-start"><i class="mdi mdi-access-point me-1"></i> Liste des demandes</div>
+                                </div>
+                                <div class="col-2">
+                                    <a class="btn btn-primary" wicket:id="addDemande"> Ajouter<i class="dripicons-plus"></i></a>
+                                </div>
+                            </div>
+                            
+                                <div wicket:id="alert"></div>
+                            
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-pills bg-nav-pills nav-justified mb-3">
+                                <li class="nav-item">
+                                    <a href="#nouveau" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
+                                        <i class="mdi mdi-home-variant d-md-none d-block"></i>
+                                        <span class="d-none d-md-block">Nouveau</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#encours" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0 active">
+                                        <i class="mdi mdi-account-circle d-md-none d-block"></i>
+                                        <span class="d-none d-md-block">En cours</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#termine" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
+                                        <i class="mdi mdi-settings-outline d-md-none d-block"></i>
+                                        <span class="d-none d-md-block">Terminé</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane" id="nouveau" wicket:id="containerNew">
+                                    <table wicket:id="dts" class="table table-sm table-striped table-centered mb-0" id="scroll-horizontal-datatable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Numéro</th>
+                                                <th scope="col">Nature</th>
+                                                <th scope="col">Type Demande</th>
+                                                <th scope="col">Date demande</th>
+                                                <th scope="col">Date réception / début souhaité</th>
+                                                <th scope="col">Etape</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr wicket:id="listViewNew">
+                                                <td wicket:id="id"></td>
+                                                <td wicket:id="nature"></td>
+                                                <td wicket:id="typeDemande"></td>
+                                                <td wicket:id="dateDemandeValue"></td>
+                                                <td wicket:id="dateLivraisonSouhaiteValue"></td>
+                                                <td wicket:id="etape"></td>
+                                                <td>
+                                                    <a wicket:id="view" title = "Visualiser" data-bs-toggle="modal" data-bs-target="#standard-modal"><span class="dripicons-preview"></span></a>
+                                                    <a wicket:id="edit" title = "Modifier"><span class="dripicons-document-edit"></span></a>
+                                                    <a wicket:id="delete" title = "Supprimer"><span class="dripicons-trash"></span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane show active" id="encours">
+                                    <table wicket:id="dts1" class="table table-sm table-striped table-centered mb-0" id="scroll-horizontal-datatable1">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Numéro</th>
+                                                <th scope="col">Nature</th>
+                                                <th scope="col">Type Demande</th>
+                                                <th scope="col">Date demande</th>
+                                                <th scope="col">Date réception / début souhaité</th>
+                                                <th scope="col">Etape</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr wicket:id="listViewProgress">
+                                                <td wicket:id="id"></td>
+                                                <td wicket:id="nature"></td>
+                                                <td wicket:id="typeDemande"></td>
+                                                <td wicket:id="dateDemandeValue"></td>
+                                                <td wicket:id="dateLivraisonSouhaiteValue"></td>
+                                                <td wicket:id="etape"></td>
+                                                <td>
+                                                    <a wicket:id="view" title = "Visualiser" data-bs-toggle="modal" data-bs-target="#standard-modal"><span class="dripicons-preview"></span></a>
+<!--                                                    <a wicket:id="delete" title = "Supprimer"><span class="dripicons-trash"></span></a>-->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane" id="termine">
+                                    <table wicket:id="dts2" class="table table-sm table-striped table-centered mb-0" id="scroll-horizontal-datatable2">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Numéro</th>
+                                                <th scope="col">Nature</th>
+                                                <th scope="col">Type Demande</th>
+                                                <th scope="col">Date demande</th>
+                                                <th scope="col">Date recéption / début souhaité</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr wicket:id="listViewFinish">
+                                                <td wicket:id="id"></td>
+                                                <td wicket:id="nature"></td>
+                                                <td wicket:id="typeDemande"></td>
+                                                <td wicket:id="dateDemandeValue"></td>
+                                                <td wicket:id="dateLivraisonSouhaiteValue"></td>
+                                                <td wicket:id="status"></td>
+                                                <td>
+                                                    <a wicket:id="view" title = "Visualiser" data-bs-toggle="modal" data-bs-target="#standard-modal"><span class="dripicons-preview"></span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            Modal-->
+            <div>
+                <div id="standard-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="standard-modalLabel">Détails de la demande</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div wicket:id="containerModal">
+                                    <table class="table table-sm table-striped table-bordered table-centered mb-2-mt-2-ml-2-mr-2">
+                                        <thead class="table-info">
+                                            <tr>
+                                                <th scope="col">Quantité /<br>Nombre à former</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Ligne budgetaire</th>
+                                                <th scope="col">Etat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr wicket:id="detailListView">
+                                                <td wicket:id="quantite"></td>
+                                                <td wicket:id="description"></td>
+                                                <td wicket:id="ligneBudgetaire"></td>
+                                                <td wicket:id="etat"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+
+
+        </wicket:panel>
+    </body>
+</html>

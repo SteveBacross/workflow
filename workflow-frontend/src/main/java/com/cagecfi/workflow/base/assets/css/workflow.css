@@ -1,0 +1,75 @@
+#id17, #id18 {
+    border-radius: .25rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+}
+
+.palette-choices{
+    width: 240px;
+    display: block;
+}
+
+.palette-buttons{
+    width: 88px;
+    margin: 61px 4px 0 130px;
+    padding: 0;
+}
+
+.palette-choices select{
+    width: 337px;
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #607080;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #dce7f1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    overflow: auto;
+}
+
+.palette-selected select{
+    width: 269px;
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #607080;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #dce7f1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    overflow: auto;
+}
+
+.palette-add::before {
+    font-weight: bold;
+    color: white;
+    content: "Ajouter";
+    border-radius: 2px;
+}
+
+.palette-remove::before {
+    font-weight: bold;
+    color: black;
+    content: "Retirer ";
+    border-radius: 2px;
+}
+
+.palette-buttons{
+    width: 88px;
+    margin: 61px 4px 0 130px;
+    padding: 0;
+}
